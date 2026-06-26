@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team | Akshata Raibagi Influencer Marketing Agency</title>
+    <meta name="description" content="Meet Akshata Raibagi, owner and growth strategist behind a professional influencer marketing and social media agency for ambitious brands.">
+    <meta name="keywords" content="Akshata Raibagi team, influencer marketing team, social media agency owner, creator campaign strategist">
+    <meta name="author" content="Akshata Raibagi">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#050507">
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="Team | Akshata Raibagi">
+    <meta property="og:description" content="Professional creator marketing leadership for brand campaigns, social strategy, and digital growth.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80&w=1200">
+    <meta name="twitter:card" content="summary_large_image">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        "name": "Team | Akshata Raibagi",
+        "mainEntity": {
+            "@type": "Person",
+            "name": "Akshata Raibagi",
+            "jobTitle": "Owner & Growth Strategist",
+            "worksFor": {
+                "@type": "ProfessionalService",
+                "name": "Akshata Raibagi"
+            },
+            "knowsAbout": [
+                "Influencer Marketing",
+                "Social Media Strategy",
+                "Creator Management",
+                "Brand Growth"
+            ]
+        }
+    }
+    </script>
+    <style>
+        :root {
+            --base-dark: #050507;
+            --surface-dark: #0c0c0f;
+            --surface-raised: #121217;
+            --surface-glass: rgba(12, 12, 15, 0.82);
+            --accent-primary: #9d50bb;
+            --accent-secondary: #2ec4b6;
+            --accent-warm: #ffb703;
+            --text-primary: #ffffff;
+            --text-secondary: #a1a1a6;
+            --border-glass: rgba(255, 255, 255, 0.09);
+            --ease-main: cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+
+        body {
+            min-height: 100vh;
+            background: var(--base-dark);
+            color: var(--text-primary);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .glow-bg {
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            background:
+                radial-gradient(circle at 15% 20%, rgba(157, 80, 187, 0.18) 0%, transparent 36%),
+                radial-gradient(circle at 85% 75%, rgba(46, 196, 182, 0.12) 0%, transparent 38%),
+                linear-gradient(135deg, #050507 0%, #0b0b10 100%);
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 24px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--surface-glass);
+            backdrop-filter: blur(20px);
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-glass);
+        }
+
+        .logo {
+            color: var(--text-primary);
+            font-weight: 800;
+            font-size: 1.35rem;
+            letter-spacing: -1px;
+            text-decoration: none;
+        }
+
+        .logo span { color: var(--accent-primary); }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 26px;
+        }
+
+        .nav-links a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: color 0.25s ease;
+        }
+
+        .nav-links a:hover { color: var(--accent-primary); }
+
+        .btn-premium {
+            padding: 14px 30px;
+            background: #fff;
+            color: #000 !important;
+            text-decoration: none;
+            border-radius: 100px;
+            font-weight: 800;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: 0.35s var(--ease-main);
+            border: 0;
+        }
+
+        .btn-premium:hover {
+            background: var(--accent-primary);
+            color: #fff !important;
+            transform: translateY(-2px);
+        }
+
+        .team-hero {
+            min-height: 92vh;
+            display: grid;
+            grid-template-columns: minmax(0, 1.02fr) minmax(340px, 0.8fr);
+            gap: 70px;
+            align-items: center;
+            padding: 150px 8% 70px;
+        }
+
+        .badge {
+            background: rgba(157, 80, 187, 0.15);
+            border: 1px solid rgba(157, 80, 187, 0.8);
+            padding: 8px 18px;
+            border-radius: 100px;
+            color: var(--accent-primary);
+            display: inline-block;
+            font-size: 0.72rem;
+            font-weight: 800;
+            letter-spacing: 1.8px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+        }
+
+        h1 {
+            max-width: 780px;
+            font-size: clamp(3.2rem, 7vw, 6.7rem);
+            line-height: 0.92;
+            letter-spacing: -2px;
+            margin-bottom: 28px;
+        }
+
+        .gradient-text {
+            background: linear-gradient(120deg, #fff 0%, var(--accent-primary) 52%, var(--accent-secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .lead {
+            max-width: 720px;
+            color: #d7d7dc;
+            font-size: 1.15rem;
+            margin-bottom: 34px;
+        }
+
+        .owner-panel {
+            background: linear-gradient(145deg, rgba(18,18,23,0.92), rgba(12,12,15,0.86));
+            border: 1px solid var(--border-glass);
+            border-radius: 28px;
+            overflow: hidden;
+            box-shadow: 0 30px 90px rgba(0, 0, 0, 0.32);
+        }
+
+        .owner-photo {
+            height: 360px;
+            background:
+                linear-gradient(180deg, rgba(5,5,7,0.05), rgba(5,5,7,0.72)),
+                url('https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80&w=1000') center/cover;
+        }
+
+        .owner-info { padding: 34px; }
+
+        .owner-info h2 {
+            font-size: 2rem;
+            letter-spacing: -1px;
+            margin-bottom: 4px;
+        }
+
+        .owner-info p { color: var(--text-secondary); }
+
+        .signal-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-top: 28px;
+        }
+
+        .signal {
+            border: 1px solid var(--border-glass);
+            border-radius: 18px;
+            padding: 18px;
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .signal strong {
+            display: block;
+            font-size: 1.5rem;
+            color: var(--accent-secondary);
+        }
+
+        .signal span {
+            color: var(--text-secondary);
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .section { padding: 90px 8%; }
+
+        .section-heading {
+            max-width: 780px;
+            margin-bottom: 42px;
+        }
+
+        .section-heading h2 {
+            font-size: clamp(2.2rem, 5vw, 4rem);
+            line-height: 1;
+            letter-spacing: -1px;
+            margin-bottom: 18px;
+        }
+
+        .section-heading p {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+        }
+
+        .capability-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .capability {
+            background: var(--surface-dark);
+            border: 1px solid var(--border-glass);
+            border-radius: 18px;
+            padding: 28px;
+            min-height: 220px;
+            transition: 0.35s var(--ease-main);
+        }
+
+        .capability:hover {
+            transform: translateY(-6px);
+            border-color: rgba(157, 80, 187, 0.65);
+            background: var(--surface-raised);
+        }
+
+        .capability i {
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(157, 80, 187, 0.16);
+            color: var(--accent-primary);
+            margin-bottom: 22px;
+            font-size: 1.15rem;
+        }
+
+        .capability h3 {
+            font-size: 1.18rem;
+            margin-bottom: 10px;
+        }
+
+        .capability p {
+            color: var(--text-secondary);
+            font-size: 0.94rem;
+        }
+
+        .leadership-band {
+            margin: 30px 8% 100px;
+            padding: 70px;
+            border-radius: 34px;
+            border: 1px solid var(--border-glass);
+            background:
+                linear-gradient(rgba(5,5,7,0.78), rgba(5,5,7,0.86)),
+                url('https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=1600') center/cover;
+            display: grid;
+            grid-template-columns: minmax(0, 0.85fr) minmax(300px, 0.55fr);
+            gap: 50px;
+            align-items: end;
+        }
+
+        .leadership-band h2 {
+            font-size: clamp(2.2rem, 5vw, 4.5rem);
+            line-height: 1;
+            letter-spacing: -1px;
+            margin-bottom: 20px;
+        }
+
+        .leadership-band p {
+            color: #d5d5dc;
+            font-size: 1.08rem;
+        }
+
+        .principles {
+            display: grid;
+            gap: 14px;
+        }
+
+        .principle {
+            background: rgba(255, 255, 255, 0.07);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 16px;
+            padding: 18px 20px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            color: #f5f5f7;
+            font-weight: 700;
+        }
+
+        .principle i { color: var(--accent-warm); }
+
+        footer {
+            padding: 55px 8%;
+            border-top: 1px solid var(--border-glass);
+            background: #000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 24px;
+        }
+
+        footer p { color: var(--text-secondary); font-size: 0.9rem; }
+
+        @media (max-width: 1050px) {
+            .team-hero,
+            .leadership-band {
+                grid-template-columns: 1fr;
+            }
+
+            .capability-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 700px) {
+            nav { padding: 18px 6%; }
+            .nav-links { gap: 14px; }
+            .nav-links a:not(.btn-premium) { display: none; }
+            .team-hero { padding: 128px 6% 45px; }
+            .section { padding: 70px 6%; }
+            .capability-grid,
+            .signal-row {
+                grid-template-columns: 1fr;
+            }
+            .leadership-band {
+                margin: 20px 6% 70px;
+                padding: 38px 28px;
+                border-radius: 24px;
+            }
+            footer {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="glow-bg"></div>
+
+    <nav>
+        <a class="logo" href="index.html">Akshata<span>Raibagi</span></a>
+        <div class="nav-links">
+            <a href="index.html#services">Services</a>
+            <a href="team.html">Team</a>
+            <a href="index.html#contact" class="btn-premium">Get in Touch</a>
+        </div>
+    </nav>
+
+    <main>
+        <section class="team-hero">
+            <div>
+                <div class="badge">Leadership</div>
+                <h1>Meet the mind behind <span class="gradient-text">measurable influence.</span></h1>
+                <p class="lead">
+                    Akshata Raibagi leads the agency with a sharp focus on brand credibility, creator alignment, and campaign execution that turns attention into business momentum.
+                </p>
+                <a href="index.html#contact" class="btn-premium"><i class="fas fa-paper-plane"></i> Start a Campaign</a>
+            </div>
+
+            <aside class="owner-panel" aria-label="Owner profile">
+                <div class="owner-photo" role="img" aria-label="Professional team collaboration"></div>
+                <div class="owner-info">
+                    <h2>Akshata Raibagi</h2>
+                    <p>Owner & Growth Strategist</p>
+                    <div class="signal-row">
+                        <div class="signal">
+                            <strong>5+</strong>
+                            <span>Years</span>
+                        </div>
+                        <div class="signal">
+                            <strong>80M+</strong>
+                            <span>Reach</span>
+                        </div>
+                        <div class="signal">
+                            <strong>100+</strong>
+                            <span>Brands</span>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </section>
+
+        <section class="section">
+            <div class="section-heading">
+                <div class="badge">Team Strengths</div>
+                <h2>A professional operating system for creator-led growth.</h2>
+                <p>
+                    The team blends strategy, talent coordination, content planning, and performance tracking so every collaboration has a clear role in the brand's growth plan.
+                </p>
+            </div>
+
+            <div class="capability-grid">
+                <article class="capability">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Growth Strategy</h3>
+                    <p>Campaign roadmaps built around audience behavior, category timing, and measurable brand outcomes.</p>
+                </article>
+                <article class="capability">
+                    <i class="fas fa-user-check"></i>
+                    <h3>Creator Selection</h3>
+                    <p>Thoughtful shortlisting that balances reach, relevance, content quality, and audience trust.</p>
+                </article>
+                <article class="capability">
+                    <i class="fas fa-bullhorn"></i>
+                    <h3>Campaign Execution</h3>
+                    <p>Clear briefs, timelines, approvals, deliverables, and launch coordination handled with precision.</p>
+                </article>
+                <article class="capability">
+                    <i class="fas fa-magnifying-glass-chart"></i>
+                    <h3>Performance Insight</h3>
+                    <p>Post-campaign analysis that turns creator content, engagement, and reach into practical next steps.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="leadership-band">
+            <div>
+                <div class="badge">Working Style</div>
+                <h2>Premium service, practical execution.</h2>
+                <p>
+                    Akshata's approach is direct, polished, and outcome-led: understand the brand, match the right voices, build clean content systems, and keep every campaign accountable.
+                </p>
+            </div>
+            <div class="principles">
+                <div class="principle"><i class="fas fa-check-circle"></i> Relationship-first creator partnerships</div>
+                <div class="principle"><i class="fas fa-check-circle"></i> Transparent campaign communication</div>
+                <div class="principle"><i class="fas fa-check-circle"></i> Content that supports brand trust</div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <a class="logo" href="index.html">Akshata<span>Raibagi</span></a>
+        <p>&copy; 2026 Akshata Raibagi. Influencer marketing, social media strategy, and creator growth.</p>
+    </footer>
+</body>
+</html>
