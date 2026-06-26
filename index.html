@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELITE INFLUENCE | Architects of Digital Authority</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;600;800&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --base-dark: #050507;
+            --surface-dark: #0c0c0f;
+            --surface-glass: rgba(12, 12, 15, 0.8);
+            --accent-primary: #9d50bb;
+            --accent-secondary: #6e48aa;
+            --accent-glow: rgba(157, 80, 187, 0.3);
+            --text-primary: #ffffff;
+            --text-secondary: #a1a1a6;
+            --border-glass: rgba(255, 255, 255, 0.08);
+            --ease-main: cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+
+        body {
+            background-color: var(--base-dark);
+            color: var(--text-primary);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* Background Dynamics */
+        .glow-bg {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            z-index: -1;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(110, 72, 170, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(157, 80, 187, 0.1) 0%, transparent 50%);
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0; width: 100%; padding: 25px 8%;
+            display: flex; justify-content: space-between; align-items: center;
+            background: var(--surface-glass);
+            backdrop-filter: blur(20px);
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-glass);
+        }
+        .logo { font-weight: 800; font-size: 1.4rem; letter-spacing: -1px; }
+        .logo span { color: var(--accent-primary); }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex; align-items: center; justify-content: center;
+            text-align: center; padding: 0 10%;
+            background: linear-gradient(rgba(5, 5, 7, 0.5), rgba(5, 5, 7, 0.5)), 
+                        url('https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=80&w=2000') no-repeat center/cover;
+        }
+
+        h1 { font-size: clamp(3.5rem, 8vw, 7rem); font-weight: 800; line-height: 0.9; margin-bottom: 30px; letter-spacing: -3px; }
+        .gradient-text { background: linear-gradient(to right, #fff, var(--accent-primary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+
+        .badge {
+            background: rgba(157, 80, 187, 0.15);
+            border: 1px solid var(--accent-primary);
+            padding: 8px 20px; border-radius: 100px;
+            font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px;
+            color: var(--accent-primary); margin-bottom: 25px; display: inline-block;
+        }
+
+        /* New Track Record Section */
+        .track-record { padding: 100px 8%; display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+        .record-card {
+            background: var(--surface-dark); border: 1px solid var(--border-glass);
+            padding: 40px; border-radius: 24px; text-align: center;
+            transition: 0.4s var(--ease-main);
+        }
+        .record-card:hover { border-color: var(--accent-primary); transform: translateY(-10px); background: #121217; }
+        .record-card h2 { font-size: 3rem; color: var(--accent-primary); margin-bottom: 5px; }
+        .record-card p { font-size: 0.8rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 1px; }
+
+        /* Modern Services Layout */
+        .section { padding: 120px 8%; }
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; }
+        
+        .card {
+            position: relative; overflow: hidden; border-radius: 32px;
+            height: 450px; border: 1px solid var(--border-glass);
+            transition: 0.5s var(--ease-main);
+        }
+        .card img { width: 100%; height: 100%; object-fit: cover; opacity: 0.4; transition: 0.5s; }
+        .card:hover img { opacity: 0.2; transform: scale(1.1); }
+        .card-content {
+            position: absolute; bottom: 0; padding: 40px;
+            background: linear-gradient(transparent, rgba(0,0,0,0.9));
+            width: 100%;
+        }
+        .card h3 { font-size: 1.8rem; margin-bottom: 10px; }
+        .card p { color: var(--text-secondary); font-size: 0.95rem; }
+
+        /* Strategy Section */
+        .strategy {
+            display: flex; align-items: center; gap: 80px;
+            background: #08080a; border-radius: 60px; padding: 80px;
+            margin: 0 8%; border: 1px solid var(--border-glass);
+        }
+        .strategy-img { flex: 1; border-radius: 30px; overflow: hidden; height: 500px; }
+        .strategy-img img { width: 100%; height: 100%; object-fit: cover; }
+        .strategy-text { flex: 1; }
+
+        /* Founders Section */
+        .founders { display: flex; gap: 40px; margin-top: 100px; }
+        .founder-box {
+            flex: 1; background: var(--surface-dark); padding: 40px;
+            border-radius: 30px; border: 1px solid var(--border-glass);
+            display: flex; align-items: center; gap: 20px;
+        }
+        .founder-avatar { width: 80px; height: 80px; border-radius: 50%; background: var(--accent-primary); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.5rem; }
+
+        /* CTA */
+        .cta {
+            text-align: center; padding: 150px 8%;
+            background: radial-gradient(circle at center, rgba(157, 80, 187, 0.1) 0%, transparent 70%);
+        }
+        .btn-premium {
+            padding: 20px 60px; background: #fff; color: #000;
+            text-decoration: none; border-radius: 100px; font-weight: 800;
+            display: inline-block; transition: 0.4s; font-size: 1.1rem;
+        }
+        .btn-premium:hover { background: var(--accent-primary); color: #fff; transform: scale(1.05); }
+
+        @media (max-width: 992px) {
+            .track-record { grid-template-columns: repeat(2, 1fr); }
+            .strategy { flex-direction: column; padding: 40px; }
+            .founders { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="glow-bg"></div>
+
+    <nav>
+        <div class="logo">ELITE<span>INFLUENCE</span></div>
+        <a href="#" class="btn-premium" style="padding: 12px 30px; font-size: 0.9rem;">Get in Touch</a>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div>
+            <div class="badge">Performance Driven Agency</div>
+            <h1>The New Standard of <br> <span class="gradient-text">Influence</span></h1>
+            <p style="max-width: 800px; margin: 0 auto 40px; font-size: 1.2rem; color: #d1d1d6;">
+                Founded by Farhan Khan & Ayush. We engineer high-impact creator partnerships that scale brands beyond the digital noise.
+            </p>
+            <a href="#services" class="btn-premium">Explore Capabilities</a>
+        </div>
+    </section>
+
+    <!-- Track Record -->
+    <div class="track-record">
+        <div class="record-card">
+            <h2>5+</h2>
+            <p>Years Mastery</p>
+        </div>
+        <div class="record-card">
+            <h2>1000+</h2>
+            <p>Creators Network</p>
+        </div>
+        <div class="record-card">
+            <h2>100+</h2>
+            <p>Global Brands</p>
+        </div>
+        <div class="record-card">
+            <h2>80M+</h2>
+            <p>Total Reach</p>
+        </div>
+    </div>
+
+    <!-- Services -->
+    <section class="section" id="services">
+        <div style="text-align: center; margin-bottom: 80px;">
+            <div class="badge">Expertise</div>
+            <h2 style="font-size: 3.5rem;">Core Competencies</h2>
+        </div>
+
+        <div class="grid-3">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800" alt="Strategy">
+                <div class="card-content">
+                    <i class="fas fa-bolt" style="color: var(--accent-primary); margin-bottom: 15px; font-size: 1.5rem;"></i>
+                    <h3>Influencer Marketing</h3>
+                    <p>Dominating YouTube & Instagram through data-backed creator collaborations.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&q=80&w=800" alt="Social">
+                <div class="card-content">
+                    <i class="fas fa-hashtag" style="color: var(--accent-primary); margin-bottom: 15px; font-size: 1.5rem;"></i>
+                    <h3>SMM & Handling</h3>
+                    <p>Precision management of brand narratives across all social ecosystems.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800" alt="Management">
+                <div class="card-content">
+                    <i class="fas fa-crown" style="color: var(--accent-primary); margin-bottom: 15px; font-size: 1.5rem;"></i>
+                    <h3>Creator Management</h3>
+                    <p>Representing the next generation of digital talent and entrepreneurs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strategy Section -->
+    <section class="strategy">
+        <div class="strategy-text">
+            <div class="badge">The Process</div>
+            <h2 style="font-size: 3rem; margin-bottom: 20px;">Why We Win.</h2>
+            <p style="color: var(--text-secondary); margin-bottom: 20px;">
+                We don't just "run campaigns." We build engines. By combining 5+ years of market psychology with a network of thousands of creators, we ensure your brand doesn't just get seen—it gets remembered.
+            </p>
+            <ul style="list-style: none; color: var(--accent-primary); font-weight: 600;">
+                <li style="margin-bottom: 10px;"><i class="fas fa-check-circle"></i> Proprietary Creator Vetting</li>
+                <li style="margin-bottom: 10px;"><i class="fas fa-check-circle"></i> Category-Specific Expertise</li>
+                <li style="margin-bottom: 10px;"><i class="fas fa-check-circle"></i> High-Performance Editing Suites</li>
+            </ul>
+        </div>
+        <div class="strategy-img">
+            <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=1000" alt="Team Work">
+        </div>
+    </section>
+
+    <!-- Founders & Story -->
+    <section class="section">
+        <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+            <div class="badge">Our Story</div>
+            <h2 style="font-size: 3.5rem; margin-bottom: 30px;">The Visionaries</h2>
+            <p style="color: var(--text-secondary); font-size: 1.2rem;">
+                Elite Influence was born from the collective vision of Farhan Khan & Ayush. With a shared background in digital storytelling and brand scaling, they recognized the need for an agency that prioritizes long-term creator relationships over short-term metrics.
+            </p>
+            
+            <div class="founders">
+                <div class="founder-box">
+                    <div class="founder-avatar">FK</div>
+                    <div style="text-align: left;">
+                        <h4 style="font-size: 1.2rem;">Farhan Khan</h4>
+                        <p style="color: var(--accent-primary); font-size: 0.8rem;">Co-Founder & Strategist</p>
+                    </div>
+                </div>
+                <div class="founder-box">
+                    <div class="founder-avatar">A</div>
+                    <div style="text-align: left;">
+                        <h4 style="font-size: 1.2rem;">Ayush</h4>
+                        <p style="color: var(--accent-primary); font-size: 0.8rem;">Co-Founder & Talent Lead</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <h2 style="font-size: 4rem; margin-bottom: 20px;">Ready to Scale?</h2>
+        <p style="color: var(--text-secondary); margin-bottom: 40px; font-size: 1.1rem;">Join the elite list of brands and creators moving the needle.</p>
+        <a href="#" class="btn-premium">Inquire Now</a>
+    </section>
+
+    <footer style="padding: 60px 8%; border-top: 1px solid var(--border-glass); display: flex; justify-content: space-between; align-items: center; background: #000;">
+        <div class="logo">ELITE<span>INFLUENCE</span></div>
+        <p style="color: var(--text-secondary); font-size: 0.9rem;">&copy; 2026 Elite Influence Agency. Architected for Performance.</p>
+    </footer>
+
+</body>
+</html>
